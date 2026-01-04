@@ -1,0 +1,174 @@
+:root {
+  --bg: #ffffff;
+  --text: #1f2933;
+  --muted: #6b7280;
+  --card: #f3f4f6;
+  --accent: #2563eb;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --card: #1e293b;
+  --accent: #38bdf8;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--card);
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+#theme-toggle {
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.hero {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2rem;
+}
+
+.hero p {
+  color: var(--muted);
+}
+
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--accent);
+  padding-left: 0.5rem;
+}
+
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.skills li {
+  background: var(--card);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.projects p {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.contact {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.contact a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: 1.5rem 1rem;
+  }
+
+  .navbar {
+    padding: 1rem;
+  }
+}
+
+.certificates ul {
+  padding-left: 1.2rem;
+}
+
+.certificates li {
+  margin-bottom: 0.4rem;
+  color: var(--muted);
+}
+
+
+/* Smooth fade-in animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* Card polish */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
