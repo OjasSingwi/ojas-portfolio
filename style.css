@@ -172,3 +172,28 @@ section {
   transform: translateY(-6px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
+
+
+.hero-buttons {
+  margin-top: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  margin: 0.3rem;
+  border-radius: 6px;
+  background: var(--accent);
+  color: white;
+  font-weight: 500;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
